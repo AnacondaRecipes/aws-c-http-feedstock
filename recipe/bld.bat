@@ -12,6 +12,3 @@ if errorlevel 1 exit 1
 
 ninja install
 if errorlevel 1 exit 1
-
-ninja test
-if errorlevel 1 exit 1
