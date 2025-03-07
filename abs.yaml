@@ -2,3 +2,5 @@ channels:
   - https://staging.continuum.io/prefect/fs/aws-c-cal-feedstock/pr2/071091c
   - https://staging.continuum.io/prefect/fs/aws-c-compression-feedstock/pr2/854701d
   - https://staging.continuum.io/prefect/fs/aws-c-io-feedstock/pr2/bf28bef
+  - https://staging.continuum.io/prefect/fs/aws-c-cal-feedstock/pr2/071091c
+  - https://staging.continuum.io/prefect/fs/s2n-feedstock/pr2/9f12ab9
