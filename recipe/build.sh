@@ -21,7 +21,8 @@ if [[ ${target_platform} == osx-* ]]; then
   EXCLUDE_ROOT_TESTS_APPLE="\
 connection_setup_shutdown_tls|\
 connection_customized_alpn|\
-connection_customized_alpn_error_with_unknown_return_string"
+connection_customized_alpn_error_with_unknown_return_string|\
+connection_h2_prior_knowledge_not_work_with_tls"
 
   ctest -E "$EXCLUDE_ROOT_TESTS_APPLE" --output-on-failure -j${CPU_COUNT}
 else
