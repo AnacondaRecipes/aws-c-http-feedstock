@@ -1,11 +1,12 @@
+{% set name = "aws-c-http" %}
 {% set version = "0.10.2" %}
 
 package:
-  name: aws-c-http
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/awslabs/aws-c-http/archive/v{{ version }}.tar.gz
+  url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 048d9d683459ade363fd7cc448c2b6329c78f67a2a0c0cb61c16de4634a2fc6b
 
 build:
@@ -15,7 +16,7 @@ build:
 
 requirements:
   build:
-    - cmake
+    - cmake >=3.9
     - {{ compiler('c') }}
     - ninja-base
   host:
@@ -41,7 +42,6 @@ about:
     C99 implementation of the HTTP/1.1 and HTTP/2 specifications
   doc_url: https://github.com/awslabs/aws-c-http
   dev_url: https://github.com/awslabs/aws-c-http
-
 
 extra:
   recipe-maintainers:
