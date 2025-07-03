@@ -7,7 +7,7 @@ cmake -GNinja ^
       -DCMAKE_INSTALL_LIBDIR=lib ^
       -DCMAKE_BUILD_TYPE=Release ^
       -DBUILD_SHARED_LIBS=ON ^
-      -DENABLE_TESTING=ON ^
+      -DBUILD_TESTING=ON ^
       -DCMAKE_POSITION_INDEPENDENT_CODE=ON ^
       ..
 if errorlevel 1 exit 1
