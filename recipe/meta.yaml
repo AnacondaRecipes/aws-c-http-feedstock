@@ -1,5 +1,5 @@
 {% set name = "aws-c-http" %}
-{% set version = "0.10.2" %}
+{% set version = "0.10.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 048d9d683459ade363fd7cc448c2b6329c78f67a2a0c0cb61c16de4634a2fc6b
+  sha256: dfeeeaa2e84ccda4c8cb0c29f412298df80a57a27003e716f2d3df9794956fc1
 
 build:
   number: 0
@@ -16,21 +16,22 @@ build:
 
 requirements:
   build:
-    - cmake >=3.9
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
+    - cmake >=3.9
     - ninja-base
   host:
     - aws-c-cal 0.9.2
-    - aws-c-common 0.12.3
+    - aws-c-common 0.12.4
     - aws-c-compression 0.3.1
-    - aws-c-io 0.20.1
+    - aws-c-io 0.21.4
 
 test:
   commands:
     - test -f $PREFIX/lib/libaws-c-http${SHLIB_EXT}  # [unix]
     - test -f $PREFIX/include/aws/http/http.h  # [unix]
-    - if not exist %LIBRARY_INC%\\aws\\http\\http.h exit 1          # [win]
-    - if not exist %PREFIX%\\Library\\bin\\aws-c-http.dll exit 1  # [win]
+    - if not exist %LIBRARY_INC%\aws\http\http.h exit 1  # [win]
+    - if not exist %LIBRARY_BIN%\aws-c-http.dll exit 1  # [win]
 
 about:
   home: https://github.com/awslabs/aws-c-http
