@@ -30,7 +30,7 @@ test:
   commands:
     - test -f $PREFIX/lib/libaws-c-http${SHLIB_EXT}  # [unix]
     - test -f $PREFIX/include/aws/http/http.h  # [unix]
-    - if not exist %LIBRARY_INC%\aws\http\http.h exit 1          # [win]
+    - if not exist %LIBRARY_INC%\aws\http\http.h exit 1  # [win]
     - if not exist %LIBRARY_BIN%\aws-c-http.dll exit 1  # [win]
 
 about:
