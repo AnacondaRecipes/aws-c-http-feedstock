@@ -16,16 +16,13 @@ cmake ${CMAKE_ARGS} -GNinja \
 
 cmake --build . --config Release --target install
 
-if [[ ${target_platform} == osx-* ]]; then
-  # Following tests require root privileges (may prompt for root password).
-  EXCLUDE_ROOT_TESTS_APPLE="\
+# Following tests failed with error Certificate has expired 
+  EXCLUDE_ROOT_TESTS="\
 connection_setup_shutdown_tls|\
 connection_customized_alpn|\
+connection_h2_prior_knowledge_not_work_with_tls|\
 connection_customized_alpn_error_with_unknown_return_string|\
-connection_h2_prior_knowledge_not_work_with_tls"
+connection_manager_single_http2_connection_failed"
 
-  ctest -E "$EXCLUDE_ROOT_TESTS_APPLE" --output-on-failure -j${CPU_COUNT}
-else
-  ctest --output-on-failure -j${CPU_COUNT}
-fi
+  ctest -E "$EXCLUDE_ROOT_TESTS" --output-on-failure -j${CPU_COUNT}
 popd
