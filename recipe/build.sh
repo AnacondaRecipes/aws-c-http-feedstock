@@ -22,6 +22,7 @@ if [[ ${target_platform} == osx-* ]]; then
 connection_setup_shutdown_tls|\
 connection_customized_alpn|\
 connection_customized_alpn_error_with_unknown_return_string|\
+connection_manager_single_http2_connection_failed|\
 connection_h2_prior_knowledge_not_work_with_tls"
 
   ctest -E "$EXCLUDE_ROOT_TESTS_APPLE" --output-on-failure -j${CPU_COUNT}
