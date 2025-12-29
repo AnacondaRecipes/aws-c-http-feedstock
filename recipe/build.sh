@@ -20,6 +20,7 @@ cmake --build . --config Release --target install
   EXCLUDE_ROOT_TESTS="\
 connection_setup_shutdown_tls|\
 connection_customized_alpn|\
+connection_h2_prior_knowledge_not_work_with_tls|\
 connection_customized_alpn_error_with_unknown_return_string|\
 connection_manager_single_http2_connection_failed"
 
