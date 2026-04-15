@@ -23,8 +23,8 @@ requirements:
   host:
     - aws-c-cal 0.9.13
     - aws-c-common 0.12.6
-    - aws-c-compression 0.3.1
-    - aws-c-io 0.23.3
+    - aws-c-compression 0.3.2
+    - aws-c-io 0.26.3
 
 test:
   commands:
