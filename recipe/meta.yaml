@@ -1,5 +1,5 @@
 {% set name = "aws-c-http" %}
-{% set version = "0.10.7" %}
+{% set version = "0.10.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: ce9e71c3eae67b1c6c0149278e0d0929a7d928c3547de64999430c8592864ad4
+  sha256: d8352e7a1fb1996694a4dc31219ce03452882abf8d0858c104727f975e11b9c7
 
 build:
   number: 0
@@ -23,8 +23,8 @@ requirements:
   host:
     - aws-c-cal 0.9.13
     - aws-c-common 0.12.6
-    - aws-c-compression 0.3.1
-    - aws-c-io 0.23.3
+    - aws-c-compression 0.3.2
+    - aws-c-io 0.26.3
 
 test:
   commands:
