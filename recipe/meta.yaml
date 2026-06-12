@@ -1,5 +1,5 @@
 {% set name = "aws-c-http" %}
-{% set version = "0.10.13" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: d8352e7a1fb1996694a4dc31219ce03452882abf8d0858c104727f975e11b9c7
+  sha256: 4ccbdd33c798b590288330dec9e93abe2ff6cfb198b7a4db036c9d362f2e6506
 
 build:
   number: 0
