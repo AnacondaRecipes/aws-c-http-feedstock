@@ -2,7 +2,7 @@
 {% set version = "0.11.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -10,7 +10,7 @@ source:
   sha256: 4ccbdd33c798b590288330dec9e93abe2ff6cfb198b7a4db036c9d362f2e6506
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage("aws-c-http", max_pin="x.x.x") }}
 
@@ -21,8 +21,8 @@ requirements:
     - cmake >=3.9
     - ninja-base
   host:
-    - aws-c-cal 0.9.13
-    - aws-c-common 0.12.6
+    - aws-c-cal 0.9.14
+    - aws-c-common 0.14.0
     - aws-c-compression 0.3.2
     - aws-c-io 0.26.3
 
