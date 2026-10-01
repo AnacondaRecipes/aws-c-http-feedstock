@@ -1,5 +1,5 @@
 {% set name = "aws-c-http" %}
-{% set version = "0.11.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4ccbdd33c798b590288330dec9e93abe2ff6cfb198b7a4db036c9d362f2e6506
+  sha256: ae992d9f24a88430cdd4b7538fab565e71faedb1f156f38d6a74f2a77269417f
 
 build:
-  number: 2
+  number: 0
   run_exports:
     - {{ pin_subpackage("aws-c-http", max_pin="x.x.x") }}
 
@@ -21,10 +21,10 @@ requirements:
     - cmake >=3.9
     - ninja-base
   host:
-    - aws-c-cal 0.9.15
-    - aws-c-common 0.14.5
-    - aws-c-compression 0.3.2
-    - aws-c-io 0.27.6
+    - aws-c-cal 1.0.0
+    - aws-c-common 1.0.1
+    - aws-c-compression 1.0.0
+    - aws-c-io 1.0.0
 
 test:
   commands:
